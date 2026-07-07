@@ -1,0 +1,1166 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+html,
+body {
+    height: 100%;
+    font-family: 'Outfit', sans-serif !important;
+    background-color: #f8fafc !important;
+    color: #1e293b;
+}
+
+.logo {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 800;
+    font-size: 1.6rem;
+    /* Usar rem es más predecible que px */
+    letter-spacing: 0.06em;
+    text-shadow: none;
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    /* Crucial para evitar que el flexbox lo aplaste side-nav */
+    line-height: 1.3;
+    /* El espacio extra evita que la fuente se corte arriba/abajo */
+    padding: 2px 0;
+    /* Margen interno de seguridad para el background-clip */
+}
+
+.fondo-claro {
+    background-color: #f8fafc;
+}
+
+.sn-bg-4 {
+    background-color: #0f172a !important;
+    background-image: none !important;
+}
+
+.bglogin {
+    height: 100%;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bglogin::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 45%);
+    pointer-events: none;
+}
+
+/* Layout rules are defined below in the responsive media query blocks */
+
+#mdb-preloader.loaded {
+    transition: .5s ease-in 1s;
+    display: none;
+}
+
+/* Modern Card Redesign */
+.card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 10px -2px rgba(15, 23, 42, 0.02) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 16px -6px rgba(15, 23, 42, 0.04) !important;
+}
+
+.card .card-header {
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+    font-weight: 600;
+    color: #0f172a;
+    padding: 1.25rem 1.5rem !important;
+}
+
+.card .card-body {
+    padding: 1.5rem 1.75rem !important;
+}
+
+.form-control,
+.form-control-lg {
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    padding: 0.65rem 1rem !important;
+    font-size: 0.95rem !important;
+    color: #0f172a !important;
+    background-color: #ffffff !important;
+    transition: all 0.2s ease-in-out !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus,
+.form-control-lg:focus {
+    border-color: #2563eb !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+.btn {
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: 0.02em !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 10px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: none !important;
+}
+
+.btn-primary {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #1d4ed8 !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
+}
+
+.btn-outline-info {
+    border: 2px solid #2563eb !important;
+    color: #2563eb !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-info:hover {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.modal .modal-dialog .modal-content {
+    border-radius: 16px !important;
+    border: none !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.input-group,
+.custom-select,
+.accordion {
+    border-radius: 10px !important;
+}
+
+.input-group .form-control {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+
+/**********************************+ MIGLA STYLES ****************************************/
+
+
+/*.fondo {
+	background-image: url('../img/fondo.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.opacity9 {
+	opacity: .9;
+}
+
+#word-count{
+	border-left: 4px solid green;
+	padding-left: 7px
+}
+
+.card-wrapper .card-up {
+    height: 300px !important;
+    overflow: hidden;
+}
+*/
+
+/* CKEDITOR image */
+
+/*
+ * CKEditor 5 (v15.0.0) content styles.
+ * Generated on Wed, 27 Nov 2019 13:26:13 GMT.
+ * For more information, check out https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/content-styles.html
+ */
+
+:root {
+    --ck-highlight-marker-blue: #72cdfd;
+    --ck-highlight-marker-green: #63f963;
+    --ck-highlight-marker-pink: #fc7999;
+    --ck-highlight-marker-yellow: #fdfd77;
+    --ck-highlight-pen-green: #118800;
+    --ck-highlight-pen-red: #e91313;
+    --ck-image-style-spacing: 1.5em;
+    --ck-todo-list-checkmark-size: 16px;
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list {
+    list-style: none;
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list li {
+    margin-bottom: 5px;
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list li .todo-list {
+    margin-top: 5px;
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list .todo-list__label>input {
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    width: var(--ck-todo-list-checkmark-size);
+    height: var(--ck-todo-list-checkmark-size);
+    vertical-align: middle;
+    border: 0;
+    left: -25px;
+    margin-right: -15px;
+    right: 0;
+    margin-left: 0;
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list .todo-list__label>input::before {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 1px solid hsl(0, 0%, 20%);
+    border-radius: 2px;
+    transition: 250ms ease-in-out box-shadow, 250ms ease-in-out background, 250ms ease-in-out border;
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list .todo-list__label>input::after {
+    display: block;
+    position: absolute;
+    box-sizing: content-box;
+    pointer-events: none;
+    content: '';
+    left: calc(var(--ck-todo-list-checkmark-size) / 3);
+    top: calc(var(--ck-todo-list-checkmark-size) / 5.3);
+    width: calc(var(--ck-todo-list-checkmark-size) / 5.3);
+    height: calc(var(--ck-todo-list-checkmark-size) / 2.6);
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 calc(var(--ck-todo-list-checkmark-size) / 8) calc(var(--ck-todo-list-checkmark-size) / 8) 0;
+    transform: rotate(45deg);
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list .todo-list__label>input[checked]::before {
+    background: hsl(126, 64%, 41%);
+    border-color: hsl(126, 64%, 41%);
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list .todo-list__label>input[checked]::after {
+    border-color: hsl(0, 0%, 100%);
+}
+
+/* ckeditor5-list/theme/todolist.css */
+.todo-list .todo-list__label .todo-list__label__description {
+    vertical-align: middle;
+}
+
+/* ckeditor5-image/theme/image.css */
+.image {
+    display: table;
+    clear: both;
+    text-align: center;
+    margin: 1em auto;
+}
+
+/* ckeditor5-image/theme/image.css */
+.image>img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 50px;
+}
+
+/* ckeditor5-block-quote/theme/blockquote.css */
+blockquote {
+    overflow: hidden;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    border-left: solid 5px hsl(0, 0%, 80%);
+}
+
+/* ckeditor5-block-quote/theme/blockquote.css */
+dir="rtl"] blockquote {
+    border-left: 0;
+    border-right: solid 5px hsl(0, 0%, 80%);
+}
+
+/* ckeditor5-image/theme/imageresize.css */
+.image.image_resized {
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* ckeditor5-image/theme/imageresize.css */
+.image.image_resized img {
+    width: 100%;
+}
+
+/* ckeditor5-image/theme/imageresize.css */
+.image.image_resized>figcaption {
+    display: block;
+}
+
+/* ckeditor5-image/theme/imagestyle.css */
+.image-style-side,
+.image-style-align-left,
+.image-style-align-center,
+.image-style-align-right {
+    max-width: 50%;
+}
+
+/* ckeditor5-image/theme/imagestyle.css */
+.image-style-side {
+    float: right;
+    margin-left: var(--ck-image-style-spacing);
+}
+
+/* ckeditor5-image/theme/imagestyle.css */
+.image-style-align-left {
+    float: left;
+    margin-right: var(--ck-image-style-spacing);
+}
+
+/* ckeditor5-image/theme/imagestyle.css */
+.image-style-align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ckeditor5-image/theme/imagestyle.css */
+.image-style-align-right {
+    float: right;
+    margin-left: var(--ck-image-style-spacing);
+}
+
+/* ckeditor5-media-embed/theme/mediaembed.css */
+.media {
+    clear: both;
+    margin: 1em 0;
+    display: block;
+    min-width: 15em;
+}
+
+/* ckeditor5-table/theme/table.css */
+.table {
+    margin: 1em auto;
+    display: table;
+}
+
+/* ckeditor5-table/theme/table.css */
+.table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px double hsl(0, 0%, 70%);
+}
+
+/* ckeditor5-table/theme/table.css */
+.table table td,
+.table table th {
+    min-width: 2em;
+    padding: .4em;
+    border-color: hsl(0, 0%, 85%);
+}
+
+/* ckeditor5-table/theme/table.css */
+.table table th {
+    font-weight: bold;
+    background: hsl(0, 0%, 98%);
+}
+
+/* ckeditor5-highlight/theme/highlight.css */
+.marker-yellow {
+    background-color: var(--ck-highlight-marker-yellow);
+}
+
+/* ckeditor5-highlight/theme/highlight.css */
+.marker-green {
+    background-color: var(--ck-highlight-marker-green);
+}
+
+/* ckeditor5-highlight/theme/highlight.css */
+.marker-pink {
+    background-color: var(--ck-highlight-marker-pink);
+}
+
+/* ckeditor5-highlight/theme/highlight.css */
+.marker-blue {
+    background-color: var(--ck-highlight-marker-blue);
+}
+
+/* ckeditor5-highlight/theme/highlight.css */
+.pen-red {
+    color: var(--ck-highlight-pen-red);
+    background-color: transparent;
+}
+
+/* ckeditor5-highlight/theme/highlight.css */
+.pen-green {
+    color: var(--ck-highlight-pen-green);
+    background-color: transparent;
+}
+
+/* ckeditor5-page-break/theme/pagebreak.css */
+.page-break {
+    position: relative;
+    clear: both;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ckeditor5-page-break/theme/pagebreak.css */
+.page-break::after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px dashed hsl(0, 0%, 77%);
+    width: 100%;
+}
+
+/* ckeditor5-page-break/theme/pagebreak.css */
+.page-break__label {
+    position: relative;
+    z-index: 1;
+    padding: .3em .6em;
+    display: block;
+    text-transform: uppercase;
+    border: 1px solid hsl(0, 0%, 77%);
+    border-radius: 2px;
+    font-family: Helvetica, Arial, Tahoma, Verdana, Sans-Serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: hsl(0, 0%, 20%);
+    background: #fff;
+    box-shadow: 2px 2px 1px hsla(0, 0%, 0%, 0.15);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* ckeditor5-basic-styles/theme/code.css */
+code {
+    background-color: hsla(0, 0%, 78%, 0.3);
+    padding: .15em;
+    border-radius: 2px;
+}
+
+/* ckeditor5-image/theme/imagecaption.css */
+.image>figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    word-break: break-word;
+    color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 97%);
+    padding: .6em;
+    font-size: .75em;
+    outline-offset: -1px;
+}
+
+/* ckeditor5-horizontal-line/theme/horizontalline.css */
+hr {
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: hsl(0, 0%, 37%);
+    margin: 0;
+}
+
+/* ckeditor5-code-block/theme/codeblock.css */
+pre {
+    padding: 1em;
+    color: #353535;
+    background: hsla(0, 0%, 78%, 0.3);
+    border: 1px solid hsl(0, 0%, 77%);
+    border-radius: 2px;
+    text-align: left;
+    direction: ltr;
+    tab-size: 4;
+    white-space: pre-wrap;
+    font-style: normal;
+    min-width: 200px;
+}
+
+/* ckeditor5-code-block/theme/codeblock.css */
+pre code {
+    background: unset;
+    padding: 0;
+    border-radius: 0;
+}
+
+@media print {
+
+    /* ckeditor5-page-break/theme/pagebreak.css */
+    .page-break {
+        padding: 0;
+    }
+
+    /* ckeditor5-page-break/theme/pagebreak.css */
+    .page-break::after {
+        display: none;
+    }
+}
+
+/* CKEditor 5 (v15.0.0) end content styles. */
+
+
+
+.fixed-action-btn ul li {
+    display: flex;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0
+}
+
+.fixed-action-btn.active ul {
+    height: 150px
+}
+
+.rounded-right-pill {
+    border-top-right-radius: 2rem !important;
+    border-bottom-right-radius: 2rem !important;
+}
+
+.rounded-left-pill {
+    border-top-left-radius: 2rem !important;
+    border-bottom-left-radius: 2rem !important;
+}
+
+#chat {
+    height: 60vh !important;
+    overflow: auto;
+}
+
+@media (max-width: 768px) {
+
+    /* Ajustamos el padding del container para que no se pegue a los bordes */
+    .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Reducimos un poco el título en móvil para que no rompa la línea */
+    div.title {
+        font-size: 20px !important;
+        padding-left: 45px !important;
+    }
+
+    /* Las cards de contenido se ven mejor con un poco más de aire */
+    .content .card-body {
+        padding: 1.5rem;
+    }
+
+    /* Los botones del card de contenido se estiran en móvil para ser más fáciles de tocar */
+    .content .d-flex {
+        flex-direction: column;
+    }
+
+    .content .btn-link {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+/* Modern side-nav, tables, navbar and utility classes */
+.side-nav {
+    background-color: #0f172a !important;
+    /* Slate-900 (Fondo profundo) */
+    border-right: 1px solid #1e293b !important;
+}
+
+.side-nav .custom-scrollbar {
+    background: transparent !important;
+}
+
+.logo-wrapper {
+    /* Un borde más sutil para separar el logo del menú */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Sidebar navigation links: High Contrast Qovex styling */
+.side-nav a {
+    color: #f1f5f9 !important;
+    /* Slate-100 (Casi blanco) */
+    font-weight: 400 !important;
+    padding: 14px 22px !important;
+    font-size: 0.95rem !important;
+    transition: all 0.25s ease !important;
+}
+
+.side-nav a:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+
+.side-nav .collapsible li a.active {
+    color: #ffffff !important;
+    background-color: #1e293b !important;
+    /* Slate-800 */
+    font-weight: 600 !important;
+    border-left: 4px solid #3b82f6 !important;
+    /* Borde azul de acento */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Ligera profundidad */
+}
+
+.side-nav .collapsible li a i {
+    color: #64748b !important;
+    /* Slate-500, contraste medio para iconos */
+}
+
+.side-nav .collapsible li a.active i,
+.side-nav .collapsible li a:hover i {
+    color: #3b82f6 !important;
+    /* Azul primario para resaltar */
+}
+
+.border-slate-700 {
+    border-top: 1px solid #334155;
+}
+
+/* Permanent open sidebar on laptop, desktop and tablet (>= 992px) */
+@media (min-width: 992px) {
+    .side-nav.fixed {
+        transform: translateX(0) !important;
+    }
+
+    .fixed-sn main {
+        margin-left: 260px !important;
+        margin-right: 1.5rem !important;
+        padding-top: 85px !important;
+    }
+
+    .fixed-sn .navbar {
+        padding-left: 280px !important;
+    }
+
+    .button-collapse {
+        display: none !important;
+    }
+}
+
+/* On screens < 992px, sidebar behaves as slide-out */
+@media (max-width: 991px) {
+    .fixed-sn main {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-top: 85px !important;
+        padding-bottom: 85px !important;
+        /* Padding for mobile bottom nav */
+    }
+
+    .fixed-sn .navbar {
+        padding-left: 1.5rem !important;
+    }
+
+    body {
+        padding-bottom: 75px !important;
+    }
+}
+
+/* Navbar updates */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+    height: 65px;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #334155 !important;
+    font-weight: 500 !important;
+}
+
+.navbar .navbar-toggler i {
+    color: #1e293b !important;
+}
+
+/* Mobile Bottom Navigation Bar */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1030;
+    box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+}
+
+.mobile-bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: #64748b !important;
+    font-size: 0.675rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    height: 100%;
+}
+
+.mobile-bottom-nav-item i {
+    font-size: 1.35rem;
+    margin-bottom: 2px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.mobile-bottom-nav-item:hover,
+.mobile-bottom-nav-item.active {
+    color: #2563eb !important;
+}
+
+.mobile-bottom-nav-item.active i {
+    transform: translateY(-2px);
+    color: #2563eb !important;
+}
+
+/* Table styling updates */
+.table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+.table thead th {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 12px 16px !important;
+}
+
+.table tbody td {
+    padding: 14px 16px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    color: #334155 !important;
+    vertical-align: middle !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8fafc !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #2563eb !important;
+    color: white !important;
+    border-color: #2563eb !important;
+    border-radius: 6px !important;
+}
+
+/* Logo custom sizes and filters  logo-wrapper*/
+.univ-logo {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.univ-logo:hover {
+    transform: scale(1.05);
+}
+
+.side-nav .univ-logo {
+    height: 60px !important;
+    filter: brightness(0) invert(1) !important;
+}
+
+.bglogin .univ-logo {
+    height: 90px !important;
+    margin-bottom: 10px;
+}
+
+/* Nuevo estilo para el subtítulo de la universidad */
+.subtitle {
+    font-size: 0.65rem;
+    color: #94a3b8;
+    /* Slate-400, excelente contraste contra fondos oscuros */
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+/* =========================================
+   SIDEBAR / MENÚ LATERAL MODERNO Y LLAMATIVO
+   ========================================= */
+
+/* 1. Fondo general del menú lateral (Forzamos el oscuro para matar el gris del framework) */
+#slide-out.side-nav {
+    background: linear-gradient(180deg, #0b1120 0%, #0f172a 100%) !important;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 2. Separación entre los elementos de la lista */
+#slide-out .collapsible li {
+    margin-bottom: 6px !important;
+}
+
+/* 3. Reset visual para los enlaces y solución al "corte" de texto */
+#slide-out .collapsible li a {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+    /* Mata el alto fijo que corta el texto */
+    line-height: normal !important;
+    /* Mata el line-height conflictivo */
+    padding: 12px 20px !important;
+    /* Espaciado interno real y centrado */
+    color: #94a3b8 !important;
+    /* Texto gris claro/azulado (elegante) */
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    margin: 0 16px !important;
+    /* Margen externo para dar efecto de pastilla flotante */
+    border-radius: 12px !important;
+    /* Bordes bien redondeados */
+    border-left: none !important;
+    /* Eliminamos cualquier borde viejo */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 4. Efecto Hover (Cuando pasas el mouse pero no está activo) */
+#slide-out .collapsible li a:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    transform: translateX(5px);
+    /* Pequeño y elegante salto hacia la derecha */
+}
+
+/* 5. Estado Activo (EL BOTÓN LLAMATIVO) */
+#slide-out .collapsible li a.active {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+    /* Gradiente azul vibrante */
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px -3px rgba(37, 99, 235, 0.5) !important;
+    /* Sombra brillante (Glow effect) */
+}
+
+/* 6. Alineación perfecta para los iconos */
+#slide-out .collapsible li a i {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    margin-right: 14px !important;
+    font-size: 1.15rem !important;
+    color: inherit !important;
+    /* Hereda el color del texto automáticamente */
+    height: auto !important;
+    line-height: normal !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* El icono crece sutilmente cuando el menú está activoslate */
+#slide-out .collapsible li a.active i {
+    transform: scale(1.1);
+}
+
+/* 7. Eliminar la máscara por defecto del framework para limpiar el fondo */
+#slide-out .sidenav-bg {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* 8. Ajuste para los enlaces de "Salir" y perfil en la versión móvil (d-lg-none) */
+#slide-out .d-lg-none a {
+    color: #94a3b8 !important;
+    border-radius: 12px !important;
+    margin: 0 16px !important;
+}
+
+#slide-out .d-lg-none a:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+#slide-out .d-lg-none .text-danger {
+    color: #ef4444 !important;
+    /* Un rojo un poco más moderno */
+}
+
+/* =========================================
+   SIDEBAR / MENÚ LATERAL CLARO Y LLAMATIVO
+   ========================================= */
+
+/* 1. Fondo general del menú lateral (Claro y limpio) */
+#slide-out.side-nav {
+    background: #ffffff !important;
+    /* Fondo blanco puro */
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.05) !important;
+    /* Sombra mucho más suave */
+    border-right: 1px solid #e2e8f0 !important;
+    /* Borde gris sutil */
+}
+
+/* 2. Filtro para hacer el logo negro */
+/* Dependiendo de si usas la clase univ-logo, un svg directo o un img */
+.side-nav .univ-logo,
+.side-nav .sidebar-shield svg,
+.side-nav .sidebar-shield img {
+    filter: brightness(0) !important;
+    /* Esto fuerza cualquier color a negro puro */
+    transition: transform 0.3s ease;
+}
+
+/* Oscurecemos un poco el subtítulo de la universidad para que se lea bien sobre blanco */
+.side-nav .subtitle {
+    color: #64748b !important;
+    /* Gris oscuro / Pizarra */
+}
+
+/* 3. Separación entre los elementos de la lista */
+#slide-out .collapsible li {
+    margin-bottom: 6px !important;
+}
+
+/* 4. Reset visual para los enlaces (Textos oscuros para contrastar el fondo blanco) */
+#slide-out .collapsible li a {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+    line-height: normal !important;
+    padding: 12px 20px !important;
+    color: #475569 !important;
+    /* Texto gris oscuro/azulado */
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    margin: 0 16px !important;
+    border-radius: 12px !important;
+    border-left: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 5. Efecto Hover (Fondo gris clarito al pasar el mouse) */
+#slide-out .collapsible li a:hover {
+    background-color: #f1f5f9 !important;
+    /* Gris ultra claro */
+    color: #0f172a !important;
+    /* Texto casi negro para resaltar */
+    transform: translateX(5px);
+}
+
+/* 6. Estado Activo (Se mantiene el gradiente azul llamativo, se ve increíble sobre blanco) */
+#slide-out .collapsible li a.active {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px -3px rgba(37, 99, 235, 0.35) !important;
+}
+
+/* 7. Alineación perfecta para los iconos */
+#slide-out .collapsible li a i {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    margin-right: 14px !important;
+    font-size: 1.15rem !important;
+    color: inherit !important;
+    height: auto !important;
+    line-height: normal !important;
+    transition: transform 0.3s ease !important;
+}
+
+#slide-out .collapsible li a.active i {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   ESTILOS PARA MENÚ MÓVIL Y DROPDOWN DEL USUARIO
+   ========================================= */
+
+/* 1. Reset para los enlaces principales en versión móvil (Respaldo BD y Perfil Prof.) */
+#slide-out li.d-lg-none a.collapsible-header,
+#slide-out li.d-lg-none a.nav-link {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+    line-height: normal !important;
+    padding: 12px 20px !important;
+    color: #475569 !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    margin: 0 16px !important;
+    border-radius: 12px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background-color: transparent !important;
+    /* Mata el fondo gris por defecto */
+    box-shadow: none !important;
+}
+
+#slide-out li.d-lg-none a.collapsible-header:hover,
+#slide-out li.d-lg-none a.nav-link:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    transform: translateX(5px);
+}
+
+/* 2. Ajuste del contenedor del Dropdown para que no parezca un bloque flotante feo */
+/* 2. Ajuste del Dropdown para matar a Popper.js (Solución al salto gigante) */
+#slide-out .dropdown-menu {
+    position: static !important;
+    /* Obliga al menú a fluir naturalmente, sin flotar */
+    transform: none !important;
+    /* Anula el translate3d gigante que inyecta Bootstrap */
+    will-change: auto !important;
+    /* Evita parpadeos de animación */
+    top: 0 !important;
+    /* Resetea la coordenada Y */
+    left: 0 !important;
+    /* Resetea la coordenada X */
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 0 10px 0 !important;
+    /* Un poco de padding inferior para respirar */
+    margin: 0 !important;
+    float: none !important;
+    min-width: auto !important;
+}
+
+/* Forzamos a que cuando tenga la clase .show (activo) se comporte como un bloque */
+#slide-out .dropdown-menu.show {
+    display: block !important;
+}
+
+/* 3. Estilos de las "pastillas" hijas (Chat, Visitas, Perfil, Salir) */
+#slide-out .dropdown-item {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+    padding: 10px 20px !important;
+    color: #64748b !important;
+    /* Un gris un pelín más claro para indicar jerarquía */
+    font-size: 0.90rem !important;
+    margin: 4px 16px 4px 36px !important;
+    /* Margen izquierdo mayor para crear efecto de "indentación" */
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+    background-color: transparent !important;
+}
+
+/* Efecto Hover para los sub-items */
+#slide-out .dropdown-item:hover {
+    background-color: #f8fafc !important;
+    /* Gris ultra sutil */
+    color: #0f172a !important;
+    transform: translateX(3px);
+    /* Un salto más pequeño que los elementos padre */
+}
+
+/* 4. Estilo especial para el botón de SALIR (rojo) */
+#slide-out .dropdown-item.text-danger {
+    color: #ef4444 !important;
+    /* Rojo moderno */
+    font-weight: 600 !important;
+}
+
+#slide-out .dropdown-item.text-danger:hover {
+    background-color: #fef2f2 !important;
+    /* Fondo rojizo suave al pasar el mouse */
+    color: #dc2626 !important;
+    /* Rojo más oscuro */
+}
+
+/* 5. Alinear correctamente los íconos de esta sección móvil */
+#slide-out li.d-lg-none a i,
+#slide-out .dropdown-item i {
+    width: 24px !important;
+    margin-right: 14px !important;
+    font-size: 1.15rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* 6. Mejorar la línea separadora para que luzca premium */
+#slide-out .dropdown-divider {
+    border-top: 1px solid #e2e8f0 !important;
+    margin: 8px 36px !important;
+}
+
+/* Permite que el dropdown del select sobresalga del cuerpo del modal sin cortarse */
+#addasignacion .modal-body {
+    overflow: visible !important;
+}
+
+/* En algunos casos, el select de MDB necesita un z-index superior dentro de modales */
+.select-wrapper ul.dropdown-content {
+    z-index: 9999 !important;
+}
+
+
+/* =========================================
+   FIX: DESBORDAMIENTO MDB-SELECT EN MODAL
+   ========================================= */
+#addasignacion .select-wrapper {
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Obligamos al input visible a no desbordarse */
+#addasignacion .select-wrapper input.select-dropdown {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Evitamos que la lista de estudiantes se salga hacia los lados */
+#addasignacion .select-wrapper ul.dropdown-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    /* Limitamos el alto para que haya scroll si tienes muchos estudiantes */
+    max-height: 250px !important;
+    overflow-y: auto !important;
+}
